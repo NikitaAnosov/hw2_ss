@@ -5,7 +5,6 @@ all: connections
 
 connections: main.o my_mat.o my_mat.h
 	$(CC) $(CFLAGS) -o connections main.o
-
 #--------------------------------
 my_mat.o: my_mat.c my_mat.h
 	$(CC) $(CFLAGS) -c my_mat.c
