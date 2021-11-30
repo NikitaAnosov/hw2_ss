@@ -2,7 +2,7 @@ CC=gcc
 CFLAGS= -Wall -g
 
 all: connections
-connections: main.o my_mat.o
+connections: main.o my_mat.o my_mat.h
 	$(CC) $(CFLAGS) -o connections main.o
 #--------------------------------
 my_mat.o: my_mat.c my_mat.h
