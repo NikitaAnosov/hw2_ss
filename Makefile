@@ -1,11 +1,10 @@
-CC=gcc
+CC= gcc
 CFLAGS= -Wall -g
-AR=ar
+AR= ar
+all: my_mat.a connections
 
-all: libmat.a connections
-
-libmat.a: my_mat.o
-	$(AR) -rcs libmat.a my_mat.o
+my_mat.a: my_mat.o
+	$(AR) -rcs my_mat.a my_mat.o
 connections:main.o my_mat.o
 	$(CC) $(CFLAGS) -o connections main.o my_mat.o
 main.o: main.c my_mat.h
